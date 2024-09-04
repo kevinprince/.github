@@ -1,0 +1,25 @@
+name: New Todo
+description: Adds a todo to the board.
+title: ""
+labels: ["todo"]
+projects: ["kevinprince/personal"]
+assignees: ["kevinprince"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What needs to be done
+  - type: dropdown
+    id: affected
+    attributes:
+      label: Affected
+      description: What thing is affected by this todo?
+      options:
+        - General
+        - Homelab
+        - Network
+        - Portfolio
+        - ISM
+      default: 0
+    validations:
+      required: true
